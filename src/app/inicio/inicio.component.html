@@ -29,72 +29,29 @@
     <h2>Jogos e Controles em Promoção</h2>
 
     <mat-grid-list cols="3" >
-        <mat-grid-tile>
+        <mat-grid-tile *ngFor="let produto off produto">
             <mat-card class="example-card">
-                <img mat-card-image src="./assets/img/jogo1.PNG" alt="Controle">
+                <img mat-card-image src="./assets/img/{{produto.foto}}" alt="jogo1">
                 <mat-card-header>
         
-                    <mat-card-title>Controles de PC e Console</mat-card-title>
+                    <mat-card-title>{{produto.produto}}</mat-card-title>
         
                 </mat-card-header>
         
                 <mat-card-content>
                     <p>
-                        Controles PC e PS5 em promoção!!
+                        {{produto.descricao}}
                     </p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <p>$R300.00</p>
+                    <p>{{produto.preco | currency : 'BRL'}}</p>
                     <button mat-button>COMPRAR</button>
                 </mat-card-actions>
             </mat-card>
         
 
         </mat-grid-tile>
-        <mat-grid-tile>
-            <mat-card class="example-card">
-                <img mat-card-image src="./assets/img/jogo2.PNG" alt="Jogo 2">
-                <mat-card-header>
         
-                    <mat-card-title>Jogos de ação em Promoção</mat-card-title>
-        
-                </mat-card-header>
-        
-                <mat-card-content>
-                    <p>
-                        Oferta de jogo, tempo limitado!!
-                    </p>
-                </mat-card-content>
-                <mat-card-actions>
-                    <p>$R150.00</p>
-                    <button mat-button>COMPRAR</button>
-                </mat-card-actions>
-            </mat-card>
-        
-
-        </mat-grid-tile>
-        <mat-grid-tile>
-            <mat-card class="example-card">
-                <img mat-card-image src="./assets/img/jogo3.PNG" alt="Jogo 3">
-                <mat-card-header>
-        
-                    <mat-card-title>Consoles em Promoção</mat-card-title>
-        
-                </mat-card-header>
-        
-                <mat-card-content>
-                    <p>Consoles e PC em promoção!!</p>
-                        
-                    
-                </mat-card-content>
-                <mat-card-actions>
-                    <p>$R1999.00</p>
-                    <button mat-button>COMPRAR</button>
-                </mat-card-actions>
-            </mat-card>
-        
-
-        </mat-grid-tile>
       </mat-grid-list>
       
 
